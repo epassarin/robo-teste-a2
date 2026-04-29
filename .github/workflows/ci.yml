@@ -1,1 +1,25 @@
-
+# Aqui listamos as TAREFAS (Jobs) que o robô vai fazer
+jobs:
+  build-e-teste:
+    # O "chão de fábrica": onde o robô vai rodar (usamos um Linux virtual do GitHub)
+    runs-on: ubuntu-latest
+ 
+    # Os PASSOS que o robô vai seguir, um por um:
+    steps:
+      # Passo 1: O robô entra no seu repositório e "baixa" o seu código no PC virtual
+      - name: Baixando o código do repositório
+        uses: actions/checkout@v4
+ 
+      # Passo 2: O robô instala o Node.js (não importa se o aluno tem no PC dele ou não)
+      - name: Instalando o Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Escolhemos a versão 20 do Node
+ 
+      # Passo 3: O robô instala as dependências (as bibliotecas do projeto)
+      - name: Instalando as dependências
+        run: npm install
+ 
+      # Passo 4: O robô roda o comando de teste ou o seu script
+      - name: Executando o script de teste
+        run: node teste.js
