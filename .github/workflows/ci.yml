@@ -24,6 +24,4 @@ jobs:
         with:
           node-version: '20' # Escolhemos a versão 20 do Node
  
-      # Passo 3: O robô instala as dependências (as bibliotecas do projeto)
-      - name: Instalando as dependências
-        run: npm install
+     
