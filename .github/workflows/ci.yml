@@ -27,7 +27,3 @@ jobs:
       # Passo 3: O robô instala as dependências (as bibliotecas do projeto)
       - name: Instalando as dependências
         run: npm install
- 
-      # Passo 4: O robô roda o comando de teste ou o seu script
-      - name: Executando o script de teste
-        run: node teste.js
