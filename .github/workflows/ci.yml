@@ -1,3 +1,11 @@
+name: CI Node.js
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 # Aqui listamos as TAREFAS (Jobs) que o robô vai fazer
 jobs:
   build-e-teste:
